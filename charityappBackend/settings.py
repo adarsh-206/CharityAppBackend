@@ -19,7 +19,7 @@ ALLOWED_HOSTS = ['192.168.29.26', 'localhost', '127.0.0.1']
 INSTALLED_APPS = [
     'authentication.apps.AuthenticationConfig',
     'healthRecords.apps.HealthrecordsConfig',
-    'django.contrib.admin',
+    # 'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
