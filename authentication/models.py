@@ -1,4 +1,5 @@
 # authentication/models.py
+
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.db import models
 
@@ -24,28 +25,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     name = models.CharField(max_length=255)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
-
-    # Additional fields
-    abhaNumber = models.CharField(max_length=255, blank=True)
-    aadharNumber = models.CharField(max_length=255, blank=True)
-    centerName = models.CharField(max_length=255, blank=True)
-    birthYear = models.CharField(max_length=4, blank=True)
-    mobileNumber = models.CharField(max_length=10, blank=True)
-    fatherHusbandName = models.CharField(max_length=255, blank=True)
-    gender = models.CharField(max_length=10, blank=True)
-    maritalStatus = models.CharField(max_length=20, blank=True)
-    category = models.CharField(max_length=50, blank=True)
-    caste = models.CharField(max_length=50, blank=True)
-    subCaste = models.CharField(max_length=50, blank=True)
-    house = models.CharField(max_length=255, blank=True)
-    city = models.CharField(max_length=255, blank=True)
-    district = models.CharField(max_length=255, blank=True)
-    state = models.CharField(max_length=255, blank=True)
-    pinCode = models.CharField(max_length=10, blank=True)
-    medication = models.CharField(max_length=3, blank=True)
-    bloodTransfusion = models.CharField(max_length=3, blank=True)
-    familyHistory = models.CharField(max_length=3, blank=True)
-    image = models.CharField(max_length=255, blank=True)
 
     objects = CustomUserManager()
 
