@@ -24,7 +24,7 @@ class HealthRecord(models.Model):
     medication = models.CharField(max_length=3, blank=True, null=True)
     bloodTransfusion = models.CharField(max_length=3, blank=True, null=True)
     familyHistory = models.CharField(max_length=3, blank=True, null=True)
-    image = models.TextField(blank=True, null=True)
+    image = models.TextField(blank=True, null=True, max_length=5000)
 
     def __str__(self):
         return f"{self.user.loginID} - {self.name}"
