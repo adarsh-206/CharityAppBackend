@@ -12,7 +12,7 @@ SECRET_KEY = 'django-insecure-^lntrc15i^p!64w@8^0wa8u@l#=v)y!k&ed%#s5coyl79myfpb
 DEBUG = True
 
 ALLOWED_HOSTS = ['192.168.29.26', 'localhost',
-                 '127.0.0.1', 'charityappbackend.onrender.com']
+                 '127.0.0.1', 'charityappbackend-6fxg.onrender.com']
 
 
 # Application definition
