@@ -56,7 +56,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "https://*",
-    "http://*"
+    "http://*",
 ]
 
 ROOT_URLCONF = 'charityappBackend.urls'
@@ -131,3 +131,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+TWILIO_ACCOUNT_SID = 'ACcede3287c65cba525337f6a4c6dec70a'
+TWILIO_AUTH_TOKEN = '29a095daff7e4cb537ec44d7bd515ef8'
+TWILIO_PHONE_NUMBER = '+916261439534'
