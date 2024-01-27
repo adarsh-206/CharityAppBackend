@@ -29,7 +29,9 @@ class LoginView(APIView):
             access_token = str(refresh.access_token)
             user_id = user.id
 
-            return Response({'access_token': access_token, 'user_id': user_id}, status=status.HTTP_200_OK)
+            user_serializer = UserSerializer(user)
+
+            return Response({'access_token': access_token, 'user_id': user_id, 'user_details': user_serializer.data}, status=status.HTTP_200_OK)
 
         return Response({'detail': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
 
