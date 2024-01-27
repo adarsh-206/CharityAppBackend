@@ -11,8 +11,7 @@ SECRET_KEY = 'django-insecure-^lntrc15i^p!64w@8^0wa8u@l#=v)y!k&ed%#s5coyl79myfpb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.29.26', 'localhost',
-                 '127.0.0.1', 'charityappbackend-6fxg.onrender.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -56,8 +55,8 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:19006',
-    'http://192.168.29.26:8081'
+    "https://*",
+    "http://*"
 ]
 
 ROOT_URLCONF = 'charityappBackend.urls'
@@ -89,7 +88,7 @@ DATABASES = {
 }
 
 DATABASES["default"] = dj_database_url.parse(
-    "postgres://charityappdb_user:UEsKCtOxLbuvRzymL8ZwMI59amNLAbKX@dpg-cmf67oen7f5s73837nrg-a.singapore-postgres.render.com/charityappdb")
+    "postgres://menumanagement_qn55_user:R5wEfPaaLJCxM2dVAzWuiqfWTOod25aU@dpg-cmq9vh821fec739kpl80-a.oregon-postgres.render.com/menumanagement_qn55")
 
 
 # Password validation
