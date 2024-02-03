@@ -10,4 +10,6 @@ router.register(r'health-records', HealthRecordViewSet,
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('create-records/', HealthRecordViewSet.as_view(
+        {'post': 'create_records_for_user'}), name='create-records'),
 ]
