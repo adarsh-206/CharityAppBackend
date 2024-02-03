@@ -7,6 +7,7 @@ from .models import HealthRecord
 from .serializers import HealthRecordSerializer
 from rest_framework import status
 from authentication.models import User
+from django.utils import timezone
 
 
 class HealthRecordViewSet(viewsets.ModelViewSet):
@@ -52,3 +53,26 @@ class HealthRecordViewSet(viewsets.ModelViewSet):
                 return Response({'error': serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
 
         return Response({'success': 'Health records created successfully.'}, status=status.HTTP_201_CREATED)
+
+    @action(detail=False, methods=['GET'])
+    def get_records_counts(self, request):
+        user_id = request.query_params.get('user_id')
+
+        # Validate if user_id is provided in the request
+        if not user_id:
+            return Response({'error': 'Please provide user_id parameter in the request.'}, status=400)
+
+        # Get total health records count for the user
+        total_records_count = HealthRecord.objects.filter(
+            user__id=user_id).count()
+
+        # Get health records count registered on today's date
+        today = timezone.now().date()
+        today_records_count = HealthRecord.objects.filter(
+            user__id=user_id, created_at__date=today).count()
+
+        return Response({
+            'user_id': user_id,
+            'total_records_count': total_records_count,
+            'today_records_count': today_records_count
+        })
