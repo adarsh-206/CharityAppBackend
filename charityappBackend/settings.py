@@ -88,7 +88,7 @@ DATABASES = {
 }
 
 DATABASES["default"] = dj_database_url.parse(
-    "postgres://menumanagement_6b06_user:JGNRo9r8dACLflep5Rd64rdIzdOnUGme@dpg-cmue3eev3ddc738haa1g-a.singapore-postgres.render.com/menumanagement_6b06")
+    "postgres://menumanagement_6wor_user:rHd6OFvkzkKJ5eU3rkWuAFZIImP9Yb4V@dpg-cmuu31ev3ddc73bp5lmg-a.singapore-postgres.render.com/menumanagement_6wor")
 
 
 # Password validation
