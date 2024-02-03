@@ -1,5 +1,6 @@
 from django.db import models
 from authentication.models import User
+from django.utils import timezone
 
 
 class HealthRecord(models.Model):
@@ -25,6 +26,7 @@ class HealthRecord(models.Model):
     bloodTransfusion = models.CharField(max_length=3, blank=True, null=True)
     familyHistory = models.CharField(max_length=3, blank=True, null=True)
     image = models.TextField(blank=True, null=True, max_length=500000)
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return f"{self.user.loginID} - {self.name}"
