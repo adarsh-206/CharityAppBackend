@@ -8,7 +8,7 @@ class HealthRecord(models.Model):
     abhaNumber = models.CharField(max_length=255)
     aadharNumber = models.CharField(max_length=255)
     centerName = models.CharField(max_length=255)
-    birthYear = models.CharField(max_length=4, blank=True, null=True)
+    birthYear = models.CharField(max_length=15, blank=True, null=True)
     mobileNumber = models.CharField(max_length=10, blank=True, null=True)
     fatherHusbandName = models.CharField(max_length=255, blank=True, null=True)
     gender = models.CharField(max_length=10, blank=True, null=True)
