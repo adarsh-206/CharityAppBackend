@@ -44,7 +44,7 @@ class HealthRecordViewSet(viewsets.ModelViewSet):
 
         # Iterate through each record and create HealthRecord objects
         for record_data in records_data:
-            record_data['user'] = user.id  # Assign the user to the record
+            record_data['user'] = user.id
             serializer = HealthRecordSerializer(data=record_data)
 
             if serializer.is_valid():

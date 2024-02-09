@@ -26,7 +26,7 @@ class HealthRecord(models.Model):
     medication = models.CharField(max_length=3, blank=True, null=True)
     bloodTransfusion = models.CharField(max_length=3, blank=True, null=True)
     familyHistory = models.CharField(max_length=3, blank=True, null=True)
-    image = models.TextField(blank=True, null=True)
+    image = models.TextField(blank=True, null=True, max_length=1000000)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
