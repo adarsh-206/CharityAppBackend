@@ -5,6 +5,7 @@ from django.utils import timezone
 
 class HealthRecord(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    userId = models.CharField(max_length=255)
     name = models.CharField(max_length=255)
     abhaNumber = models.CharField(max_length=255)
     aadharNumber = models.CharField(max_length=255)
