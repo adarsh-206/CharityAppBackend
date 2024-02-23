@@ -88,7 +88,7 @@ DATABASES = {
 }
 
 DATABASES["default"] = dj_database_url.parse(
-    "postgres://charityappdb_mkmz_user:atsFuYfJiOtKkJKjZrXzXK5ewt7pw0w4@dpg-cnc626la73kc73ek82mg-a/charityappdb_mkmz")
+    "postgres://charityappdb_mkmz_user:atsFuYfJiOtKkJKjZrXzXK5ewt7pw0w4@dpg-cnc626la73kc73ek82mg-a.singapore-postgres.render.com/charityappdb_mkmz")
 
 
 # Password validation
